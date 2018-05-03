@@ -1281,7 +1281,7 @@ type BookUpdate struct {
 	Amount float64    // updated amount
 	Side   OrderSide  // side
 	Action BookAction // action (add/remove)
-	Precision BookPrecision // detect: add new field
+	Precision string // detect: add new field
 }
 
 type BookUpdateSnapshot struct {
