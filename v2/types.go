@@ -1281,6 +1281,7 @@ type BookUpdate struct {
 	Amount float64    // updated amount
 	Side   OrderSide  // side
 	Action BookAction // action (add/remove)
+	Precision BookPrecision // detect: add new field
 }
 
 type BookUpdateSnapshot struct {
@@ -1351,6 +1352,7 @@ func NewBookUpdateFromRaw(symbol, precision string, data []interface{}) (b *Book
 		Side:   side,
 		Action: action,
 		ID:     id,
+		Precision: precision,
 	}
 
 	return
